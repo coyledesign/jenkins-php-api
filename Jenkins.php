@@ -1,4 +1,4 @@
-<?php
+<?php namespace Jenkins;
 
 class Jenkins
 {
@@ -97,7 +97,7 @@ class Jenkins
   }
 
   /**
-   * @return Jenkins_Job[]
+   * @return Job[]
    */
   public function getJobs()
   {
@@ -200,7 +200,7 @@ class Jenkins
       throw new RunTimeException('Error during json_decode');
     }
 
-    return new Jenkins_Job($infos, $this);
+    return new Job($infos, $this);
   }
 
   /**
@@ -314,7 +314,7 @@ class Jenkins
    * @param        $buildId
    * @param string $tree
    *
-   * @return Jenkins_Build
+   * @return Build
    * @throws RuntimeException
    */
   public function getBuild($job, $buildId, $tree = 'actions[parameters,parameters[name,value]],result,duration,timestamp,number,url,estimatedDuration,builtOn')
@@ -340,7 +340,7 @@ class Jenkins
       return null;
     }
 
-    return new Jenkins_Build($infos, $this);
+    return new Build($infos, $this);
   }
 
   /**
@@ -359,7 +359,7 @@ class Jenkins
   /**
    * @param string $computerName
    *
-   * @return Jenkins_Computer
+   * @return Computer
    * @throws RuntimeException
    */
   public function getComputer($computerName)
@@ -381,7 +381,7 @@ class Jenkins
       return null;
     }
 
-    return new Jenkins_Computer($infos, $this);
+    return new Computer($infos, $this);
   }
 
   /**
@@ -516,12 +516,12 @@ class Jenkins
   }
 
   /**
-   * @param Jenkins_JobQueue $queue
+   * @param JobQueue $queue
    *
    * @throws RuntimeException
    * @return void
    */
-  public function cancelQueue(Jenkins_JobQueue $queue)
+  public function cancelQueue(JobQueue $queue)
   {
     $url  = sprintf('%s/queue/item/%s/cancelQueue', $this->baseUrl, $queue->getId());
 
@@ -611,7 +611,7 @@ class Jenkins
       throw new RuntimeException($errorMessage);
     }
 
-    return new Jenkins_TestReport($this, $infos, $jobName, $buildId);
+    return new TestReport($this, $infos, $jobName, $buildId);
   }
 
   /**
@@ -639,7 +639,7 @@ class Jenkins
   }
 
   /**
-   * @return Jenkins_Computer[]
+   * @return Computer[]
    */
   public function getComputers()
   {

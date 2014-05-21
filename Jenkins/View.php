@@ -1,6 +1,6 @@
-<?php
+<?php namespace Jenkins;
 
-class Jenkins_View
+class View
 {
   /**
    * @var stdClass
@@ -32,7 +32,7 @@ class Jenkins_View
   }
 
   /**
-   * @return Jenkins_Job[]
+   * @return Job[]
    */
   public function getJobs()
   {

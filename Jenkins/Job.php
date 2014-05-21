@@ -1,6 +1,5 @@
-<?php
-
-class Jenkins_Job
+<?php namespace Jenkins;
+class Job
 {
   
   /**
@@ -25,7 +24,7 @@ class Jenkins_Job
   }
 
   /**
-   * @return Jenkins_Build[]
+   * @return Build[]
    */
   public function getBuilds()
   {
@@ -42,7 +41,7 @@ class Jenkins_Job
   /**
    * @param int $buildId
    *
-   * @return Jenkins_Build
+   * @return Build
    * @throws RuntimeException
    */
   public function getJenkinsBuild($buildId)
@@ -134,7 +133,7 @@ class Jenkins_Job
   /**
    * @param \Jenkins $jenkins
    *
-   * @return Jenkins_Job
+   * @return Job
    */
   public function setJenkins(Jenkins $jenkins)
   {
@@ -144,7 +143,7 @@ class Jenkins_Job
   }
   
   /**
-   * @return Jenkins_Build|null
+   * @return Build|null
    */
   public function getLastSuccessfulBuild()
   {

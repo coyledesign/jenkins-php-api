@@ -1,6 +1,6 @@
-<?php
- 
-class Jenkins_Build 
+<?php namespace Jenkins;
+
+class Build
 {
   /**
    * @var string
@@ -168,22 +168,22 @@ class Jenkins_Build
     switch($this->build->result)
     {
       case 'FAILURE':
-        $result = Jenkins_Build::FAILURE;
+        $result = Build::FAILURE;
         break;      
       case 'SUCCESS':
-        $result = Jenkins_Build::SUCCESS;
+        $result = Build::SUCCESS;
         break;      
       case 'UNSTABLE':
-        $result = Jenkins_Build::UNSTABLE;
+        $result = Build::UNSTABLE;
         break;       
       case 'ABORTED':
-        $result = Jenkins_Build::ABORTED;
+        $result = Build::ABORTED;
         break; 
       case 'WAITING':
-        $result = Jenkins_Build::WAITING;
+        $result = Build::WAITING;
         break;
       default:
-        $result = Jenkins_Build::RUNNING;
+        $result = Build::RUNNING;
         break;
     }
     
@@ -227,7 +227,7 @@ class Jenkins_Build
    */
   public function isRunning()
   {
-    return Jenkins_Build::RUNNING === $this->getResult();
+    return Build::RUNNING === $this->getResult();
   }
 
   /**
@@ -241,7 +241,7 @@ class Jenkins_Build
   /**
    * @param \Jenkins $jenkins
    *
-   * @return Jenkins_Job
+   * @return Job
    */
   public function setJenkins(Jenkins $jenkins)
   {
