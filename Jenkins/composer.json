@@ -1,0 +1,16 @@
+{
+    "name": "coyledesign/jenkins-api",
+    "description": "A PHP wrapper around the Jenkins API",
+    "minimum-stability": "stable",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Adrien Gallou",
+            "email": "adriengallou@gmail.com"
+        },
+        {
+            "name": "Kevin Coyle",
+            "email": "kevin.coyle@drutek.co.uk"
+        }
+    ]
+}
