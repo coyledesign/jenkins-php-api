@@ -1,4 +1,4 @@
-<?php
+<?php namespace Jenkins;
  
 class Jenkins_Queue 
 {
@@ -31,7 +31,7 @@ class Jenkins_Queue
     
     foreach ($this->queue->items as $item)
     {
-      $jobs[] = new Jenkins_JobQueue($item, $this->getJenkins());
+      $jobs[] = new JobQueue($item, $this->getJenkins());
     }
     
     return $jobs;

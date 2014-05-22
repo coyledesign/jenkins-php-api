@@ -1,6 +1,6 @@
-<?php
+<?php namespace Jenkins;
  
-class Jenkins_JobQueue
+class JobQueue
 {
   /**
    * @var stdClass

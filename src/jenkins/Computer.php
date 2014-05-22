@@ -1,6 +1,6 @@
-<?php
+<?php namespace Jenkins;
 
-class Jenkins_Computer
+class Computer
 {
 
   /**
@@ -55,7 +55,7 @@ class Jenkins_Computer
 
   /**
    *
-   * @return Jenkins_Computer
+   * @return Computer
    */
   public function toggleOffline()
   {
@@ -66,7 +66,7 @@ class Jenkins_Computer
 
   /**
    *
-   * @return Jenkins_Computer
+   * @return Computer
    */
   public function delete()
   {
@@ -86,7 +86,7 @@ class Jenkins_Computer
   /**
    * @param Jenkins $jenkins
    *
-   * @return Jenkins_Computer
+   * @return Computer
    */
   public function setJenkins(Jenkins $jenkins)
   {

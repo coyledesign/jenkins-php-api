@@ -1,6 +1,5 @@
-<?php
- 
-class Jenkins_Factory 
+<?php namespace Jenkins;
+class Factory
 {
 
   /**

@@ -1,5 +1,4 @@
-<?php
-
+<?php namespace Jenkins;
 class Jenkins_Executor
 {
 
@@ -102,7 +101,7 @@ class Jenkins_Executor
   /**
    * @param \Jenkins $jenkins
    *
-   * @return Jenkins_Job
+   * @return Job
    */
   public function setJenkins(Jenkins $jenkins)
   {
