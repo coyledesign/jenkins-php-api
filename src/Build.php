@@ -150,8 +150,8 @@ class Build
     if (null !== ($estimatedDuration = $this->getEstimatedDuration()))
     {
       //be carefull because time from JK server could be different 
-      //of time from Jenkins server
-      //but i didn't find a timestamp given by Jenkins api
+      //of time from src server
+      //but i didn't find a timestamp given by src api
       
       $remaining = $estimatedDuration - (time() - $this->getTimestamp()) ;
     }
