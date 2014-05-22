@@ -9,7 +9,7 @@ class Jenkins
     /**
      * @var string
      */
-    private $baseUrl;
+    protected $baseUrl;
 
     /**
      * @var null
