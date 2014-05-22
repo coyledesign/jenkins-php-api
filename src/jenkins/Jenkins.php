@@ -229,7 +229,7 @@ class Jenkins
     }
 
     /**
-     * @return Jenkins_Queue
+     * @return Queue
      * @throws RuntimeException
      */
     public function getQueue()
@@ -250,7 +250,7 @@ class Jenkins
             throw new RunTimeException('Error during json_decode');
         }
 
-        return new Jenkins_Queue($infos, $this);
+        return new Queue($infos, $this);
     }
 
     /**
