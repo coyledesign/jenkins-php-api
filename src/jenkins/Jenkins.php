@@ -2,6 +2,7 @@
 
 use \InvalidArgumentException as InvalidArgumentException;
 use \RunTimeException as RunTimeException;
+use \stdClass as stdClass;
 
 class Jenkins
 {
